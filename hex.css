@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@300;500;800&display=swap');
+
+*{
+    box-sizing: content-box;
+}
+
+:root{
+        --primary-color: rgba(145, 142, 130, 0.749);
+        --secondary-color:rgb(8, 9, 9);
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family:'Roboto', monospace;
+    margin: 0;
+}
+header{
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start ;
+    background-color: var (--secondary-color);
+}
+
+.search{
+    background-color: thistle;
+    border: 2px thin black;
+    padding:0.5rem 3.5rem; 
+    border-radius: 20px;
+    font-size: 2rem; 
+    color: rgb(59, 47, 47);
+    font-family: monospace;
+} 
+
+.search:focus{
+    outline:5;
+    background-color: rgb(217, 199, 247);
+} 
+.search::placeholder{
+
+    color: #6c6c6d;
+ }
+main{
+    display:flex;
+    flex-wrap: wrap ;
+    justify-content:center;
+}   
+.movie{
+    width: 500px ;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 3px 5px rgb(240, 202, 202);
+    background-color: rgb(168, 226, 241);
+    position: relative;
+    overflow: scroll;
+}    
+
+.movies img{
+    width:90%;
+}
+
+.movie-info{
+    color:rgb(65, 62, 62);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem 2rem;
+    letter-spacing: 0.4px;
+}
+
+.movie-info h2{
+    margin-top: 0 ;
+}
+.movie-info span{
+    background-color: rgb(163, 255, 211);
+    padding: 0.8rem 1.6rem;
+    border-radius: 25px;
+    font-weight: normal ;
+}
+.movie-info span.blue{
+    color:rgb(24, 13, 184);
+}
+.movie-info span.orange{
+    color:rgb(247, 163, 6);
+}
+.movie-info span.red{
+    color:red;
+}
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(228, 240, 169);
+    padding: 1rem;
+    max-height: 100%;
+    transform: translate(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+#tags{ 
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+.tag{
+    color: white;
+    padding: 10px 20px;
+    background-color: orange;
+    border-radius: 50px;
+    margin:5px;
+    display: inline-block;
+    cursor: pointer;
+}
